@@ -1,0 +1,12 @@
+version: '3.8'
+services:
+  myblog:
+    build: ./
+    image: alpersadblog:latest
+    volumes:
+      - type: bind
+        source: .
+        target: /alpersad
+    ports:
+      - "4000:4000"
+      - "35729:35729"
